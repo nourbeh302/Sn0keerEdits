@@ -1,0 +1,20 @@
+{
+  "name": "sn0keeredits",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nourbeh302/Sn0keerEdits.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nourbeh302/Sn0keerEdits/issues"
+  },
+  "homepage": "https://github.com/nourbeh302/Sn0keerEdits#readme"
+}

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+@font-face {
+  font-family: "IntegralCF";
+  src: url("../fonts/IntegralCF-Bold.otf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "IntegralCF";
+  src: url("../fonts/IntegralCF-Regular.otf");
+  font-weight: 400;
+}
+
+:root {
+  --primary-base: hsl(254, 55%, 43%);
+  --light-base: hsl(254, 83%, 77%);
+  --black-base: hsl(0, 0%, 5%);
+  --white-base: hsl(0, 0%, 95%);
+  --grey-base: hsl(0, 0%, 60%);
+
+  --primary-hover: hsl(264, 76%, 27%);
+
+  --font-default: "IntegralCF", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+}
+
+:is(a, button) {
+  all: unset;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  padding: 32px;
+}
+
+@media (width > 768px) {
+  .container {
+    padding-inline: 10%;
+  }
+}
