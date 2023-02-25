@@ -11,7 +11,7 @@ function applyAnimation(entries) {
 }
 
 // Observe the elements
-const heroBody = document.querySelector(".hero-body")
+const heroBody = document.querySelector("#hero .section-body")
 const videoCards = document.querySelectorAll(".grid-card")
 const elementsObserved = []
 

@@ -24,12 +24,12 @@ nav {
 }
 
 /*#region Hero Section */
-#hero {
+:is(#hero, #about) {
   text-align: center;
   min-height: calc(100svh - 96px);
 }
 
-.hero-body {
+.section-body {
   margin-top: 0px;
   width: 100%;
 }
@@ -38,17 +38,17 @@ nav {
   animation: fadeInUp 2000ms 1 ease-in;
 }
 
-.hero-body h1 {
+.section-body h1 {
   font-size: 3rem;
   line-height: 0.96;
 }
 
-.hero-body p {
+.section-body p {
   color: var(--grey-base);
   text-align: left;
 }
 
-.hero-body button {
+.section-body button {
   background: var(--primary-base);
   width: max-content;
   padding: 12px 32px;
@@ -59,13 +59,13 @@ nav {
   transition: all 125ms ease-in;
 }
 
-.hero-body button:is(:hover, :visited, :active, :focus) {
+.section-body button:is(:hover, :visited, :active, :focus) {
   background: var(--primary-hover);
 }
 /*#endregion */
 
 /*#region Videos Section */
-main {
+section#videos {
   background: var(--light-base);
   background: url("../assets/images/main-background.png") repeat center center;
   /* background-size: cover; */
@@ -108,6 +108,22 @@ main {
 /*#endregion */
 
 /*#region Footer */
+#about {
+  background: url("../assets/images/about-image.png") no-repeat center center;
+  background-size: cover;
+  color: var(--white-base);
+  min-height: 100svh !important;
+
+  animation: clipPathAnimation 10000ms infinite ease-in;
+}
+
+#about .section-body {
+  margin-top: 24px;
+}
+
+/*#endregion */
+
+/*#region Footer */
 
 footer.dark-theme {
   background: var(--black-base);
@@ -146,17 +162,17 @@ small.copyrights {
 
 /*#region Breakpoints */
 @media (width > 375px) {
-  .hero-body h1 {
+  .section-body h1 {
     font-size: 4rem;
   }
 }
 
 @media (width > 768px) {
-  .hero-body h1 {
+  .section-body h1 {
     font-size: 4rem;
   }
 
-  .hero-body p {
+  .section-body p {
     font-size: 1.1rem;
   }
 }
@@ -166,21 +182,21 @@ small.copyrights {
     text-align: left;
   }
 
-  #hero {
+  :is(#hero, #about) {
     text-align: left;
     min-height: calc(100svh - 96px);
   }
 
-  .hero-body {
+  .section-body {
     margin-top: 0;
     width: 600px;
   }
 
-  .hero-body h1 {
+  .section-body h1 {
     font-size: 6rem;
   }
 
-  .hero-body p {
+  .section-body p {
     font-size: 1.2rem;
   }
 
@@ -200,6 +216,25 @@ small.copyrights {
   to {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+
+
+@keyframes clipPathAnimation {
+  0% {
+    clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  33% {
+    clip-path: polygon(0 7%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  67% {
+    clip-path: polygon(0 0%, 100% 7%, 100% 100%, 0% 100%);
+  }
+
+  100% {
+    clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
   }
 }
 /*#endregion */
