@@ -72,7 +72,7 @@ section#videos {
   text-align: center;
 }
 
-.works-container h2 {
+:is(.works-container, #clients) h2 {
   font-size: clamp(1.5rem, 5vw, 2rem);
   text-transform: uppercase;
   line-height: 0.96;
@@ -107,7 +107,57 @@ section#videos {
 }
 /*#endregion */
 
-/*#region Footer */
+/*#region Clients */
+
+#clients {
+  background: url("../assets/images/main-background.png") repeat center center;
+}
+
+#clients h2 {
+  color: var(--primary-base);
+  text-align: center;
+}
+
+#clients .clients-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-block: 64px 32px;
+}
+
+@media (625px < width <= 1024px) {
+  #clients .clients-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width > 1024px) {
+  #clients .clients-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
+
+.client-item {
+  cursor: pointer;
+  /* width: 200px; */
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0px 0px 8px hsla(0, 0%, 10%, 0.5);
+
+  transition: all 125ms ease-in;
+}
+
+.client-item:hover {
+  scale: 105%;
+}
+
+.client-item img {
+  width: 100%;
+  height: 100%;
+}
+/*#endregion */
+
+/*#region About */
 #about {
   background: url("../assets/images/about-image.png") no-repeat center center;
   background-size: cover;
@@ -119,6 +169,12 @@ section#videos {
 
 #about .section-body {
   margin-top: 24px;
+}
+
+#about .section-body p {
+  line-height: 1.8rem;
+  font-family: "DM Sans", sans-serif;
+  font-weight: bold;
 }
 
 /*#endregion */
@@ -200,7 +256,7 @@ small.copyrights {
     font-size: 1.2rem;
   }
 
-  .works-container h2 {
+  :is(.works-container, #clients) h2 {
     font-size: 2.5rem;
   }
 }
