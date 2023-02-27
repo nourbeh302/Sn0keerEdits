@@ -126,7 +126,6 @@ section#videos {
 
 .client-item {
   cursor: pointer;
-  /* width: 200px; */
   aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 4px;
